@@ -5,33 +5,25 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PORT=8000
 
-# Install FFmpeg + dependencies
-RUN apt-get update --fix-missing && \
-    apt-get install -y --no-install-recommends \
-    ffmpeg \
-    curl \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+# Install FFmpeg
+RUN apt-get update && apt-get install -y ffmpeg curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# Copy & install Python packages
+# Install Python packages
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip==24.2 && \
+RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy ALL files (including main.py)
+# Copy code
 COPY . .
 
-# Create directories (✅ SAFE - no file check)
-RUN mkdir -p /app/downloads /app/data && \
-    chmod -R 755 /app/downloads /app/data /app
+# Create directories
+RUN mkdir -p /app/downloads /app/data && chmod -R 755 /app
 
-# Health check + Expose port
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:${PORT}/ || exit 1
+# Expose port
+EXPOSE 8000
 
-EXPOSE ${PORT}
-
-# Run whatever main file exists (flexible)
-CMD ["sh", "-c", "if [ -f main.py ]; then python main.py; elif [ -f app.py ]; then python app.py; else python3 -c 'print("No main file found"); exit(1)'; fi"]
+# FIXED: Simple CMD (no complex shell)
+CMD python main.py
