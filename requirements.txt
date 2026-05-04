@@ -38,7 +38,7 @@ python-whois
 pyshorteners
 pytz
 pytube
-pytgcalls==0.9.7
+pytgcalls==0.0.24
 pyyaml==6.0.1
 qrcode
 requests
