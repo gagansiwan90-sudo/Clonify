@@ -1,34 +1,64 @@
-# Core Bot Framework
-pyrogram==2.0.106
-tgcrypto==1.2.5
-py-tgcalls==0.9.7
-
-# Music & Audio
-yt-dlp==2024.4.9
-pytube==15.0.0
-youtube-search-python==1.6.2
-pydub==0.25.1
-ffmpeg-python==0.2.0
-
-# Database (FIXED)
-aiosqlite==0.19.0
-motor==3.5.1
-pickledb==0.4
-
-# HTTP & Async
-aiohttp==3.9.3
-aiofiles==23.2.1
+aiofiles
+aiohttp
+apscheduler
+asyncio
+bard
+bing_image_downloader 
+beautifulsoup4
+bs4
+cloudscraper
+deepai
+dnspython
+emojis
+ffmpeg-python
+Faker
+future==1.0.0
+git+https://github.com/AsmSafone/SafoneAPI
+gitpython
+gpytranslate
+gtts
+hachoir
+heroku3
 httpx==0.27.0
-requests==2.31.0
-
-# Admin & Utils
-python-dotenv==1.0.0
-psutil==5.9.8
-pyyaml==6.0.1
-
-# Media Processing
+img2pdf
+instaloader
+lexica-api
+motor 
+numpy<2.0.0
+openai==0.28.0
+opencv-python
 pillow==9.5.0
-hachoir==3.1.2
-
-# Web Framework
-flask==3.0.0
+psutil
+pickledb
+pornhub-api==0.3.0
+pycountry
+pycryptodome
+pydub
+pyfiglet
+pykeyboard
+# pyrogram==2.0.106
+git+https://github.com/KurimuzonAkuma/pyrogram.git
+python-dotenv
+python-telegram-bot==21.1.1
+python-whois
+pyshorteners
+pyttsx3
+pytz
+pytube
+py-tgcalls==0.9.7
+pyyaml==6.0.1
+qrcode
+requests
+SafoneAPI
+search_engine_parser
+speedtest-cli
+SpeechRecognition
+spotipy
+telegraph
+tgcrypto
+unidecode
+wget
+yt-dlp
+youtube-search
+youtube-search-python
+flask
