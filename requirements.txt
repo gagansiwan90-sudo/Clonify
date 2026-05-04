@@ -38,7 +38,7 @@ python-whois
 pyshorteners
 pytz
 pytube
-git+https://github.com/pytgcalls/pytgcalls.git@v0.9.7
+pytgcalls==0.9.7
 pyyaml==6.0.1
 qrcode
 requests
