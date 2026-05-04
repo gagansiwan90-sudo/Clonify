@@ -27,7 +27,7 @@ opencv-python
 pillow==10.4.0
 psutil
 pickledb
-pornhub-api==0.3.0
+pornhub-api==0.2.0
 pycountry
 pycryptodome
 pydub
