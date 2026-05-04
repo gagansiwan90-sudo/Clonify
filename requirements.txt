@@ -38,7 +38,7 @@ python-whois
 pyshorteners
 pytz
 pytube
-py-tgcalls==2.2.12
+py-tgcalls==2.2.8
 pyyaml==6.0.1
 qrcode
 requests
